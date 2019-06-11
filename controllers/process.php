@@ -17,12 +17,30 @@ function dumpArray($elements) {
 
 function checkAccount() {
   $errors = array();
-  if (!$_POST['firstName']) {
-    $errors['firstName'] = "Content may not be empty.";
-  }
 
-  if (!$post['title']) {
-    $errors['title'] = "Title may not be empty.";
+  if (!$_POST['firstName']) {
+    $errors['firstName'] = "First name may not be empty.";
+  }
+  if (!$_POST['lastName']) {
+    $errors['lastName'] = "Last name may not be empty.";
+  }
+  if (!$_POST['email1']) {
+    $errors['email1'] = "Email address may not be empty.";
+  }
+  if (!$_POST['email2']) {
+    $errors['email2'] = "Confirmed email address may not be empty.";
+  }
+  if (!$_POST['password1']) {
+    $errors['password1'] = "Password may not be empty.";
+  }
+  if (!$_POST['password2']) {
+    $errors['password2'] = "Password may not be empty.";
+  }
+  if ($_POST['email1'] != $_POST['email2']) {
+    $errors['emailMismatch'] = "Email addresses do not match";
+  }
+  if ($_POST['password1'] != $_POST['password2']) {
+    $errors['passwordMismatch'] = "Passwords do not match";
   }
 
   return $errors;
@@ -30,13 +48,25 @@ function checkAccount() {
 }
 function post_account() {
   $errors = checkAccount();
-  renderTemplate(
-    "views/process.php",
-    array(
-      'title' => 'PHP Forms Examples variable dump',
-      'variables' => $_POST
-    )
-  );
+  if ($errors) {
+    renderTemplate(
+      "views/index.php",
+      array(
+        'title' => 'PHP Forms Examples',
+        'variables' => $_POST,
+        'accountErrors' => $errors
+      )
+    );
+    
+  } else {
+    renderTemplate(
+      "views/process.php",
+      array(
+        'title' => 'PHP Forms Examples variable dump',
+        'variables' => $_POST
+      )
+    );
+  }
 }
 
 function post_contact() {

@@ -67,8 +67,8 @@
       <div class="alert alert-danger mb-0" role="alert">
         Please fix the following errors
         <ul>
-<?php  foreach ($accountErrors as $error): ?>
-          <li>$error</li>
+<?php  foreach ($accountErrors as $key => $error): ?>
+          <li><?php echo(htmlentities($error)); ?></li>
 <?php  endforeach; ?>
         </ul>
       </div>
@@ -167,8 +167,8 @@
       <div class="alert alert-danger mb-0" role="alert">
         Please fix the following errors
         <ul>
-<?php  foreach ($contactErrors as $error): ?>
-          <li>$error</li>
+<?php  foreach ($contactErrors as $key => $error): ?>
+          <li><?php echo(htmlentities($error)); ?></li>
 <?php  endforeach; ?>
         </ul>
       </div>

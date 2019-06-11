@@ -10,8 +10,8 @@
       <div class="alert alert-danger mb-0" role="alert">
         Please fix the following errors
         <ul>
-[[ foreach ($accountErrors as $error): ]]
-          <li>$error</li>
+[[ foreach ($accountErrors as $key => $error): ]]
+          <li>{{$error}}</li>
 [[ endforeach; ]]
         </ul>
       </div>
@@ -110,8 +110,8 @@
       <div class="alert alert-danger mb-0" role="alert">
         Please fix the following errors
         <ul>
-[[ foreach ($contactErrors as $error): ]]
-          <li>$error</li>
+[[ foreach ($contactErrors as $key => $error): ]]
+          <li>{{$error}}</li>
 [[ endforeach; ]]
         </ul>
       </div>
