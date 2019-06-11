@@ -39,53 +39,37 @@
             </div>
           </div>
           <div class="form-row mt-4">
-            <div class="col col-lg-6">
+            <div class="col">
               <label for="gender">Gender</label>
               <div class="form-control" id="gender">
-                <div class="form-row">
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="gender" id="male" value="male">
-                      <label class="form-check-label" for="male">Male</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-                      <label class="form-check-label" for="female">Female</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="gender" id="nonbinary" value="nonbinary">
-                      <label class="form-check-label" for="nonbinary">Non-binary</label>
-                    </div>
-                  </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                  <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                  <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gender" id="nonbinary" value="nonbinary">
+                  <label class="form-check-label" for="nonbinary">Non-binary</label>
                 </div>
               </div>
             </div>
-            <div class="col col-lg-6">
+            <div class="col">
               <label for="device">Devices owned</label>
               <div class="form-control" id="device">
-                <div class="form-row">
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="device" id="apple" value="apple">
-                      <label class="form-check-label" for="apple">iPhone</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="device" id="android" value="android">
-                      <label class="form-check-label" for="android">Android</label>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-check form-check-inline">
-                      <input class="form-check-input" type="radio" name="device" id="blackberry" value="blackberry">
-                      <label class="form-check-label" for="blackberry">Non-binary</label>
-                    </div>
-                  </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="device" id="apple" value="apple">
+                  <label class="form-check-label" for="apple">iPhone</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="device" id="android" value="android">
+                  <label class="form-check-label" for="android">Android</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="device" id="blackberry" value="blackberry">
+                  <label class="form-check-label" for="blackberry">Blackberry</label>
                 </div>
               </div>
             </div>
@@ -102,6 +86,8 @@
   </div>
 </div>
 
+                
+                
 <!-- contact us form example with textarea and select -->
                 
 <div class="row mt-4">
