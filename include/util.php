@@ -59,8 +59,9 @@ function __cacheName($view) {
 }
 
 function isSelected(&$something, $compare) {
+  error_log("$something and $compare");
   if (isset($something) && $something == $compare) {
-    return "selected";
+    return "checked";
   }
   return "";
 }
