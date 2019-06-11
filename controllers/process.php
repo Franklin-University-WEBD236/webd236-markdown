@@ -50,13 +50,12 @@ function checkAccount() {
 function post_account() {
   $errors = checkAccount();
   if ($errors) {
-    $params['title'] = 'PHP Forms Examples';
-    $params[
     renderTemplate(
       "views/index.php",
       array(
         'title' => 'PHP Forms Examples',
-        'accountErrors'] = $errors;
+        'accountErrors' => $errors,
+        'formdata' => $_POST
       )
     );
   } else {

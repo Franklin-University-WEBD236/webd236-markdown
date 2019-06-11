@@ -58,8 +58,8 @@ function __cacheName($view) {
   return implode('/', $cachePath);
 }
 
-function valueOf(&$something) {
-  return isset($something) ? $something : "";
+function valueOf(&$something, $default = "") {
+  return isset($something) ? $something : $default;
 }
 
 function renderTemplate($view, $params) {

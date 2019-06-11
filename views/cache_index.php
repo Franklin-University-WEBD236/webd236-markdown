@@ -16,7 +16,7 @@
   <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
       <a class="navbar-brand" href="/">
-        <img src="https://cdn.glitch.com/5b0f8a54-892a-4d86-9d84-94836d1a3a6c%2Fblog.svg?v=1560192184638" width="30" height="30" class="d-inline-block align-top" alt=""> My Blog Engine</a>
+        <img src="https://cdn.glitch.com/5b0f8a54-892a-4d86-9d84-94836d1a3a6c%2Fblog.svg?v=1560192184638" width="30" height="30" class="d-inline-block align-top" alt=""> PHP Forms Examples</a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
@@ -78,31 +78,31 @@
           <div class="form-row">
             <div class="col">
               <label for="firstName">First name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required value=<?php echo(htmlentities(valueOf($variables['firstName']))); ?>>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required value=<?php echo(htmlentities(valueOf($formdata['firstName']))); ?>>
             </div>
             <div class="col">
               <label for="lastName">Last name</label>
-              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required>
+              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required value=<?php echo(htmlentities(valueOf($formdata['lastName']))); ?>>
             </div>
           </div>
           <div class="form-row mt-4">
             <div class="col">
               <label for="email1">Email address</label>
-              <input type="email" class="form-control" id="email1" name="email1" placeholder="Enter email address" required>
+              <input type="email" class="form-control" id="email1" name="email1" placeholder="Enter email address" required value=<?php echo(htmlentities(valueOf($formdata['email1']))); ?>>
             </div>
             <div class="col">
               <label for="email2">Confirm email address</label>
-              <input type="email" class="form-control" id="email2" name="email2" placeholder="Re-enter email address" required>
+              <input type="email" class="form-control" id="email2" name="email2" placeholder="Re-enter email address" required value=<?php echo(htmlentities(valueOf($formdata['email2']))); ?>>
             </div>
           </div>
           <div class="form-row mt-4">
             <div class="col">
               <label for="password1">Password</label>
-              <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password" required>
+              <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password" required value=<?php echo(htmlentities(valueOf($formdata['password1']))); ?>>
             </div>
             <div class="col">
               <label for="password2">Confirm password</label>
-              <input type="password" class="form-control" id="password2" name="password2" placeholder="Re-enter password" required>
+              <input type="password" class="form-control" id="password2" name="password2" placeholder="Re-enter password" required value=<?php echo(htmlentities(valueOf($formdata['password2']))); ?>>
             </div>
           </div>
           <div class="form-row mt-4">
@@ -127,7 +127,7 @@
               <label for="device">Devices owned</label>
               <div class="border p-2 rounded" id="device">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device"[] id="apple" value="apple">
+                  <input class="form-check-input" type="checkbox" name="device[]" id="apple" value="apple">
                   <label class="form-check-label" for="apple">iPhone</label>
                 </div>
                 <div class="form-check">
