@@ -6,6 +6,16 @@
       <div class="card-header">
         <span class="h3">Create your account</span>
       </div>
+[[ if (isset($accountErrors)): ]]
+      <div class="alert alert-danger mb-0" role="alert">
+        Please fix the following errors
+        <ul>
+[[ foreach ($accountErrors as $error): ]]
+          <li>$error</li>
+[[ endforeach; ]]
+        </ul>
+      </div>
+[[ endif; ]]
       <div class="card-body">
         <form action="@@process/dump@@" method="post">
           <div class="form-row">
@@ -41,7 +51,7 @@
           <div class="form-row mt-4">
             <div class="col">
               <label for="gender">Gender</label>
-              <div class="form-control" id="gender">
+              <div class="border p-2 rounded" id="gender">
                 <div class="form-check">
                   <input class="form-check-input" type="radio" name="gender" id="male" value="male">
                   <label class="form-check-label" for="male">Male</label>
@@ -58,7 +68,7 @@
             </div>
             <div class="col">
               <label for="device">Devices owned</label>
-              <div class="form-control" id="device">
+              <div class="border p-2 rounded" id="device">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" name="device" id="apple" value="apple">
                   <label class="form-check-label" for="apple">iPhone</label>
