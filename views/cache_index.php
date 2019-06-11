@@ -33,7 +33,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 class="display-4"><?php echo(htmlentities($title)); ?></h1>
-          <p class="lead">PHP Forms Examples.</p>
+          <p class="lead">PHP Forms Examples. This demonstrates basic and complex forms and their processing through a script.</p>
           <p><em>Author: <a href="https://www.franklin.edu/about-us/faculty-staff/faculty-profiles/whittakt">Todd Whittaker</a></em></p>
           <hr>
         </div>
@@ -59,8 +59,14 @@
 
 <div class="row">
   <div class="col-lg-12">
-    <h2>Recent posts</h2>
-    <p>Something should go here</p>
+    <form action="/process/dump" method="post">
+      <div class="form-group">
+        <label for="firstName">First name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name">
+        <label for="firstName">First name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name">
+      </div>
+    </form>
   </div>
 </div>
   
