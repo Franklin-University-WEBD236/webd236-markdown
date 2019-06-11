@@ -107,6 +107,8 @@
   </div>
 </div>
 
+<!-- contact us form example with textarea and select -->
+                
 <div class="row mt-4">
   <div class="col-lg-12">
     <div class="card">
@@ -129,11 +131,11 @@
             <div class="col">
               <label for="product">State</label>
               <select id="product" class="form-control">
-                <option selected>Choose product...</option>
-                <option>Books</option>
-                <option>Music</option>
-                <option>Magazines</option>
-                <option>Videos</option>
+                <option value="invalid" selected>Choose product...</option>
+                <option value="books">Books</option>
+                <option value="music">Music</option>
+                <option value="magazine">Magazines</option>
+                <option value="videos">Videos</option>
               </select>
             </div>
           </div>
@@ -150,16 +152,10 @@
                 
           <div class="form-row mt-4">
             <div class="col">
-              <div class="form-group">
-                <label for="content">Content</label>
-                <textarea class="form-control" id="content" name="content" placeholder="Enter content" rows="12"><?php echo(htmlentities($post['content'])); ?></textarea>
-              </div>
-              <div class="form-group">
-                
-                
-                
-                
-                
+              <label for="message">Content</label>
+              <textarea class="form-control" id="message" name="message" placeholder="Enter message" rows="12"></textarea>
+            </div>
+          </div>
           <div class="form-row mt-4 float-right">
             <div class="btn-toolbar align-middle">
               <button type="submit" class="btn btn-primary mr-1 d-flex justify-content-center align-content-between"><span class="material-icons">send</span>&nbsp;Submit</button>
