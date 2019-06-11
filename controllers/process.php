@@ -9,19 +9,44 @@ function dumpArray($elements) {
           containing:" . dumpArray($value) . "</li>\n";
     } else {
       $value = nl2br(htmlspecialchars($value)); 
-      $result .= "<li>Key <b>$key</b> has value<b>$value</b></li>\n";
+      $result .= "<li>Key <b>$key</b> has value <b>$value</b></li>\n";
     }
   }
   return $result . "</ol>\n";
 }
 
-function post_dump() {
+function checkAccount() {
+  $errors = array();
+  if (!$_POST['firstName']) {
+    $errors['firstName'] = "Content may not be empty.";
+  }
+
+  if (!$post['title']) {
+    $errors['title'] = "Title may not be empty.";
+  }
+
+  return $errors;
+
+}
+function post_account() {
+  $errors = checkAccount();
   renderTemplate(
-    "views/formdump.php",
+    "views/process.php",
     array(
       'title' => 'PHP Forms Examples variable dump',
       'variables' => $_POST
     )
   );
 }
+
+function post_contact() {
+  renderTemplate(
+    "views/process.php",
+    array(
+      'title' => 'PHP Forms Examples variable dump',
+      'variables' => $_POST
+    )
+  );
+}
+
 ?>

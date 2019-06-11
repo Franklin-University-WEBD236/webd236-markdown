@@ -74,7 +74,7 @@
       </div>
 <?php  endif; ?>
       <div class="card-body">
-        <form action="/process/dump" method="post">
+        <form action="/process/account" method="post">
           <div class="form-row">
             <div class="col">
               <label for="firstName">First name</label>
@@ -127,15 +127,15 @@
               <label for="device">Devices owned</label>
               <div class="border p-2 rounded" id="device">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device" id="apple" value="apple">
+                  <input class="form-check-input" type="checkbox" name="device"[] id="apple" value="apple">
                   <label class="form-check-label" for="apple">iPhone</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device" id="android" value="android">
+                  <input class="form-check-input" type="checkbox" name="device[]" id="android" value="android">
                   <label class="form-check-label" for="android">Android</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device" id="blackberry" value="blackberry">
+                  <input class="form-check-input" type="checkbox" name="device[]" id="blackberry" value="blackberry">
                   <label class="form-check-label" for="blackberry">Blackberry</label>
                 </div>
               </div>
@@ -174,7 +174,7 @@
       </div>
 <?php  endif; ?>
       <div class="card-body">
-        <form action="/process/dump" method="post">
+        <form action="/process/contact" method="post">
           <div class="form-row">
             <div class="col">
               <label for="subject">Subject</label>
@@ -188,7 +188,7 @@
             </div>
             <div class="col">
               <label for="product">State</label>
-              <select id="product" class="form-control">
+              <select name="product" id="product" class="form-control">
                 <option value="invalid" selected>Choose product...</option>
                 <option value="books">Books</option>
                 <option value="music">Music</option>
