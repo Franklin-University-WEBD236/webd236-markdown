@@ -127,15 +127,15 @@
               <label for="device">Devices owned</label>
               <div class="border p-2 rounded" id="device">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device[]" id="apple" value="apple" <?php echo(htmlentities(isSelected($formdata['gender'], 'apple'))); ?>>
+                  <input class="form-check-input" type="checkbox" name="device[]" id="apple" value="apple" <?php echo(htmlentities(isSelected($formdata['device'], 'apple'))); ?>>
                   <label class="form-check-label" for="apple">iPhone</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device[]" id="android" value="android" <?php echo(htmlentities(isSelected($formdata['gender'], 'android'))); ?>>
+                  <input class="form-check-input" type="checkbox" name="device[]" id="android" value="android" <?php echo(htmlentities(isSelected($formdata['device'], 'android'))); ?>>
                   <label class="form-check-label" for="android">Android</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device[]" id="blackberry" value="blackberry" <?php echo(htmlentities(isSelected($formdata['gender'], 'blackberry'))); ?>>
+                  <input class="form-check-input" type="checkbox" name="device[]" id="blackberry" value="blackberry" <?php echo(htmlentities(isSelected($formdata['device'], 'blackberry'))); ?>>
                   <label class="form-check-label" for="blackberry">Blackberry</label>
                 </div>
               </div>

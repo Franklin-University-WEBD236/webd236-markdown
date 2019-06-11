@@ -58,15 +58,14 @@ function __cacheName($view) {
   return implode('/', $cachePath);
 }
 
-function isSelected(&$something, $compare) {
-  error_log("$something and $compare");
-  if (isset($something) && $something == $compare) {
+function checked(&$something, $compare) {
+  if (isset($something) && (is_array($something) && in_array($compare, $something) || $something == $compare)) {
     return "checked";
   }
   return "";
 }
 
-function valueOf(&$something, $default = "") {
+function value(&$something, $default = "") {
   return isset($something) ? $something : $default;
 }
 
