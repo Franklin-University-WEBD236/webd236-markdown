@@ -38,6 +38,22 @@
               <input type="password" class="form-control" id="password2" name="password2" placeholder="Re-enter password" required>
             </div>
           </div>
+          <div class="form-row mt-4">
+            <div class="col">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="nonbinary" value="nonbinary">
+                <label class="form-check-label" for="nonbinary">Non-binary</label>
+              </div>
+            </div>
+          </div>
           <div class="form-row mt-4 float-right">
             <div class="btn-toolbar align-middle">
               <button type="submit" class="btn btn-primary mr-1 d-flex justify-content-center align-content-between"><span class="material-icons">send</span>&nbsp;Submit</button>
