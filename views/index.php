@@ -21,31 +21,31 @@
           <div class="form-row">
             <div class="col">
               <label for="firstName">First name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required value="{{value($formdata['firstName'])}}"">
+              <input type="text" class="form-control" id="firstName" name="data[firstName]" placeholder="Enter first name" required value="{{value($data['firstName'])}}">
             </div>
             <div class="col">
               <label for="lastName">Last name</label>
-              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name" required value="{{value($formdata['lastName'])}}">
+              <input type="text" class="form-control" id="lastName" name="data[lastName]" placeholder="Enter last name" required value="{{value($data['lastName'])}}">
             </div>
           </div>
           <div class="form-row mt-4">
             <div class="col">
               <label for="email1">Email address</label>
-              <input type="email" class="form-control" id="email1" name="email1" placeholder="Enter email address" required value="{{value($formdata['email1'])}}">
+              <input type="email" class="form-control" id="email1" name="data[email1]" placeholder="Enter email address" required value="{{value($data['email1'])}}">
             </div>
             <div class="col">
               <label for="email2">Confirm email address</label>
-              <input type="email" class="form-control" id="email2" name="email2" placeholder="Re-enter email address" required value="{{value($formdata['email2'])}}">
+              <input type="email" class="form-control" id="email2" name="data[email2]" placeholder="Re-enter email address" required value="{{value($data['email2'])}}">
             </div>
           </div>
           <div class="form-row mt-4">
             <div class="col">
               <label for="password1">Password</label>
-              <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password" required value="{{value($formdata['password1'])}}">
+              <input type="password" class="form-control" id="password1" name="data[password1]" placeholder="Enter password" required value="{{value($data['password1'])}}">
             </div>
             <div class="col">
               <label for="password2">Confirm password</label>
-              <input type="password" class="form-control" id="password2" name="password2" placeholder="Re-enter password" required value="{{value($formdata['password2'])}}">
+              <input type="password" class="form-control" id="password2" name="data[password2]" placeholder="Re-enter password" required value="{{value($data['password2'])}}">
             </div>
           </div>
           <div class="form-row mt-4">
@@ -53,15 +53,15 @@
               <label for="gender">Gender</label>
               <div class="border p-2 rounded" id="gender">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="male" value="male" {{checked($formdata['gender'], 'male')}}>
+                  <input class="form-check-input" type="radio" name="data[gender]" id="male" value="male" {{checked($data['gender'], 'male')}}>
                   <label class="form-check-label" for="male">Male</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="female" value="female" {{checked($formdata['gender'], 'female')}}>
+                  <input class="form-check-input" type="radio" name="data[gender]" id="female" value="female" {{checked($data['gender'], 'female')}}>
                   <label class="form-check-label" for="female">Female</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="nonbinary" value="nonbinary" {{checked($formdata['gender'], 'nonbinary')}}>
+                  <input class="form-check-input" type="radio" name="data[gender]" id="nonbinary" value="nonbinary" {{checked($data['gender'], 'nonbinary')}}>
                   <label class="form-check-label" for="nonbinary">Non-binary</label>
                 </div>
               </div>
@@ -70,15 +70,15 @@
               <label for="device">Devices owned</label>
               <div class="border p-2 rounded" id="device">
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device[]" id="apple" value="apple" {{checked($formdata['device'], 'apple')}}>
+                  <input class="form-check-input" type="checkbox" name="data[device][]" id="apple" value="apple" {{checked($data['device'], 'apple')}}>
                   <label class="form-check-label" for="apple">iPhone</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device[]" id="android" value="android" {{checked($formdata['device'], 'android')}}>
+                  <input class="form-check-input" type="checkbox" name="data[device][]" id="android" value="android" {{checked($data['device'], 'android')}}>
                   <label class="form-check-label" for="android">Android</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" name="device[]" id="blackberry" value="blackberry" {{checked($formdata['device'], 'blackberry')}}>
+                  <input class="form-check-input" type="checkbox" name="data[device][]" id="blackberry" value="blackberry" {{checked($data['device'], 'blackberry')}}>
                   <label class="form-check-label" for="blackberry">Blackberry</label>
                 </div>
               </div>

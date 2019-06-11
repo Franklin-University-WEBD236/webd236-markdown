@@ -15,31 +15,31 @@ function dumpArray($elements) {
   return $result . "</ol>\n";
 }
 
-function checkAccount() {
+function checkAccount($array) {
   $errors = array();
 
-  if (!$_POST['firstName']) {
+  if (!$array['firstName']) {
     $errors['firstName'] = "First name may not be empty.";
   }
-  if (!$_POST['lastName']) {
+  if (!$array['lastName']) {
     $errors['lastName'] = "Last name may not be empty.";
   }
-  if (!$_POST['email1']) {
+  if (!$array['email1']) {
     $errors['email1'] = "Email address may not be empty.";
   }
-  if (!$_POST['email2']) {
+  if (!$array['email2']) {
     $errors['email2'] = "Confirmed email address may not be empty.";
   }
-  if (!$_POST['password1']) {
+  if (!$array['password1']) {
     $errors['password1'] = "Password may not be empty.";
   }
-  if (!$_POST['password2']) {
+  if (!$array['password2']) {
     $errors['password2'] = "Password may not be empty.";
   }
-  if ($_POST['email1'] != $_POST['email2']) {
+  if ($array['email1'] != $array['email2']) {
     $errors['emailMismatch'] = "Email addresses do not match";
   }
-  if ($_POST['password1'] != $_POST['password2']) {
+  if ($array['password1'] != $array['password2']) {
     $errors['passwordMismatch'] = "Passwords do not match";
   }
 
@@ -48,14 +48,14 @@ function checkAccount() {
 }
 
 function post_account() {
-  $errors = checkAccount();
+  $errors = checkAccount($_POST['data']);
   if ($errors) {
     renderTemplate(
       "views/index.php",
       array(
         'title' => 'PHP Forms Examples',
         'accountErrors' => $errors,
-        'formdata' => $_POST
+        'data' => $_POST['data']
       )
     );
   } else {
