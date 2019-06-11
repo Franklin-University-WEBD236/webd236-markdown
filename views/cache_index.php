@@ -102,7 +102,7 @@
             </div>
             <div class="col">
               <label for="password2">Confirm password</label>
-              <input type="password" class="form-control" id="password2" name="password2" placeholder="Re-enter password" required value=<?php echo(htmlentities(valueOf($formdata['password2']))); ?>>
+              <input type="password" class="form-control" id="password2" name="password2" placeholder="Re-enter password" required value="<?php echo(htmlentities(valueOf($formdata['password2']))); ?>">
             </div>
           </div>
           <div class="form-row mt-4">
@@ -110,15 +110,15 @@
               <label for="gender">Gender</label>
               <div class="border p-2 rounded" id="gender">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                  <input class="form-check-input" type="radio" name="gender" id="male" value="male" <?php echo(htmlentities(isSelected($formData['gender'], 'male'))); ?>>
                   <label class="form-check-label" for="male">Male</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                  <input class="form-check-input" type="radio" name="gender" id="female" value="female" <?php echo(htmlentities(isSelected($formData['gender'], 'female'))); ?>>
                   <label class="form-check-label" for="female">Female</label>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="gender" id="nonbinary" value="nonbinary">
+                  <input class="form-check-input" type="radio" name="gender" id="nonbinary" value="nonbinary" <?php echo(htmlentities(isSelected($formData['gender'], 'nonbinary'))); ?>>
                   <label class="form-check-label" for="nonbinary">Non-binary</label>
                 </div>
               </div>
@@ -178,17 +178,17 @@
           <div class="form-row">
             <div class="col">
               <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
+              <input type="text" class="form-control" id="subject" name="form[subject]" placeholder="Enter subject" required>
             </div>
           </div>
           <div class="form-row mt-4">
             <div class="col">
               <label for="email3">Email address</label>
-              <input type="email" class="form-control" id="email3" name="email3" placeholder="Enter email address" required>
+              <input type="email" class="form-control" id="email3" name="form[email3]" placeholder="Enter email address" required>
             </div>
             <div class="col">
               <label for="product">State</label>
-              <select name="product" id="product" class="form-control">
+              <select name="form[product]" id="product" class="form-control">
                 <option value="invalid" selected>Choose product...</option>
                 <option value="books">Books</option>
                 <option value="music">Music</option>
@@ -201,7 +201,7 @@
           <div class="form-row mt-4">
             <div class="col">
               <label for="message">Content</label>
-              <textarea class="form-control" id="message" name="message" placeholder="Enter message" rows="12"></textarea>
+              <textarea class="form-control" id="message" name="form[message]" placeholder="Enter message" rows="12"></textarea>
             </div>
           </div>
           <div class="form-row mt-4 float-right">

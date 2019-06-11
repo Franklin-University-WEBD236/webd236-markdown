@@ -58,6 +58,13 @@ function __cacheName($view) {
   return implode('/', $cachePath);
 }
 
+function isSelected(&$something, $compare) {
+  if (isset($something) && $something == $compare) {
+    return "selected";
+  }
+  return "";
+}
+
 function valueOf(&$something, $default = "") {
   return isset($something) ? $something : $default;
 }
