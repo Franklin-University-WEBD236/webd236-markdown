@@ -46,6 +46,7 @@ function checkAccount() {
   return $errors;
 
 }
+
 function post_account() {
   $errors = checkAccount();
   if ($errors) {
@@ -57,7 +58,6 @@ function post_account() {
         'accountErrors' => $errors
       )
     );
-    
   } else {
     renderTemplate(
       "views/process.php",

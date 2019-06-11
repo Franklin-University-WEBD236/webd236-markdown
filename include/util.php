@@ -58,6 +58,10 @@ function __cacheName($view) {
   return implode('/', $cachePath);
 }
 
+function valueOf($something) {
+  return isset($something) ? $something : "";
+}
+
 function renderTemplate($view, $params) {
   $useCache = false;
 

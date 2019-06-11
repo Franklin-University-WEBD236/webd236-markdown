@@ -78,7 +78,7 @@
           <div class="form-row">
             <div class="col">
               <label for="firstName">First name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required>
+              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name" required value=<?php echo(htmlentities(valueOf($variables['firstName']))); ?>>
             </div>
             <div class="col">
               <label for="lastName">Last name</label>
