@@ -58,7 +58,7 @@ function __cacheName($view) {
   return implode('/', $cachePath);
 }
 
-function valueOf($something) {
+function valueOf(&$something) {
   return isset($something) ? $something : "";
 }
 
