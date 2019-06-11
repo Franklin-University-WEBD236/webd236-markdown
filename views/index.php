@@ -106,6 +106,16 @@
       <div class="card-header">
         <span class="h3">Contact us!</span>
       </div>
+[[ if (isset($contactErrors)): ]]
+      <div class="alert alert-danger mb-0" role="alert">
+        Please fix the following errors
+        <ul>
+[[ foreach ($contactErrors as $error): ]]
+          <li>$error</li>
+[[ endforeach; ]]
+        </ul>
+      </div>
+[[ endif; ]]
       <div class="card-body">
         <form action="@@process/dump@@" method="post">
           <div class="form-row">
@@ -128,16 +138,6 @@
                 <option value="magazine">Magazines</option>
                 <option value="videos">Videos</option>
               </select>
-            </div>
-          </div>
-          <div class="form-row mt-4">
-            <div class="col">
-              <label for="password1">Password</label>
-              <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password" required>
-            </div>
-            <div class="col">
-              <label for="password2">Confirm password</label>
-              <input type="password" class="form-control" id="password2" name="password2" placeholder="Re-enter password" required>
             </div>
           </div>
                 
