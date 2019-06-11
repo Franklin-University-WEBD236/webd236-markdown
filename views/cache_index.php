@@ -61,16 +61,12 @@
 <div class="row">
   <div class="col-lg-12">
 
-  <!-- contact us form example with textarea and select -->
-                
-<div class="row mt-4">
-  <div class="col-lg-12">
     <div class="card">
       <div class="card-header">
         <div class="h3">Contact us!</div>
         <div><small>This form does no validation and submits its data to top-level variables. Also if there are errors, no data is retained in the form (all must be retyped).</small></div>
       </div>
-      
+
       <div class="card-body">
         <form action="/process/contact" method="post">
           <div class="form-row">
@@ -95,7 +91,7 @@
               </select>
             </div>
           </div>
-                
+
           <div class="form-row mt-4">
             <div class="col">
               <label for="message">Content</label>
@@ -112,7 +108,7 @@
       </div>
     </div>
 
-  
+
     <div class="card mt-4">
       <div class="card-header">
         <div class="h3">Create your account</div>
@@ -205,11 +201,6 @@
         </form>
       </div>
     </div>
-  </div>
-</div>
-
-                
-                
   </div>
 </div>
 
