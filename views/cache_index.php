@@ -81,7 +81,7 @@
               <input type="email" class="form-control" id="email3" name="email3" placeholder="Enter email address" required>
             </div>
             <div class="col">
-              <label for="product">State</label>
+              <label for="product">Product of interest</label>
               <select name="product" id="product" class="form-control">
                 <option value="invalid" selected>Choose product...</option>
                 <option value="books">Books</option>
