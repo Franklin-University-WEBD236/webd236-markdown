@@ -11,8 +11,6 @@ function get_index() {
 }
 
 function post_simple() {
-  echo "<pre>";
-  print_r($_POST);
-  echo "</pre>";
+  echo "Hello {$_POST['data']['firstName']}";
 }
 ?>
