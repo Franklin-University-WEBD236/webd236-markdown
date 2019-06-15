@@ -14,28 +14,22 @@
         <form action="@@process/contact@@" method="post">
           <div class="form-row">
             <div class="col">
-              <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
             </div>
-          </div>
-          <div class="form-row mt-4">
             <div class="col">
               <label for="email3">Email address</label>
               <input type="email" class="form-control" id="email3" name="email3" placeholder="Enter email address" required>
             </div>
+          </div>
+          <div class="form-row mt-2">
             <div class="col">
-              <label for="product">Product of interest</label>
-              <select name="product" id="product" class="form-control">
-                <option value="invalid" selected>Choose product...</option>
-                <option value="books">Books</option>
-                <option value="music">Music</option>
-                <option value="magazine">Magazines</option>
-                <option value="videos">Videos</option>
-              </select>
+              <label for="subject">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
             </div>
           </div>
 
-          <div class="form-row mt-4">
+          <div class="form-row mt-2">
             <div class="col">
               <label for="message">Content</label>
               <textarea class="form-control" id="message" name="message" placeholder="Enter message" rows="12"></textarea>

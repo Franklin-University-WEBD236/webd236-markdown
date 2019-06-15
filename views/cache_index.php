@@ -6,11 +6,10 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="/static/style.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="/static/custom.js"></script>
   </head>
   <body>
@@ -75,28 +74,22 @@
         <form action="/process/contact" method="post">
           <div class="form-row">
             <div class="col">
-              <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
             </div>
-          </div>
-          <div class="form-row mt-4">
             <div class="col">
               <label for="email3">Email address</label>
               <input type="email" class="form-control" id="email3" name="email3" placeholder="Enter email address" required>
             </div>
+          </div>
+          <div class="form-row mt-2">
             <div class="col">
-              <label for="product">Product of interest</label>
-              <select name="product" id="product" class="form-control">
-                <option value="invalid" selected>Choose product...</option>
-                <option value="books">Books</option>
-                <option value="music">Music</option>
-                <option value="magazine">Magazines</option>
-                <option value="videos">Videos</option>
-              </select>
+              <label for="subject">Subject</label>
+              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
             </div>
           </div>
 
-          <div class="form-row mt-4">
+          <div class="form-row mt-2">
             <div class="col">
               <label for="message">Content</label>
               <textarea class="form-control" id="message" name="message" placeholder="Enter message" rows="12"></textarea>
