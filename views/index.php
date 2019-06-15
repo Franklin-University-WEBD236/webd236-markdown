@@ -15,24 +15,24 @@
           <div class="form-row">
             <div class="col">
               <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+              <input type="text" class="form-control" id="name" name="form[name]" placeholder="Enter your name" required value={{value($form['name'])}}>
             </div>
             <div class="col">
               <label for="email3">Email address</label>
-              <input type="email" class="form-control" id="email3" name="email3" placeholder="Enter email address" required>
+              <input type="email" class="form-control" id="email3" name="form[email]" placeholder="Enter email address" required value={{value($form['email'])}}>
             </div>
           </div>
           <div class="form-row mt-2">
             <div class="col">
               <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter subject" required>
+              <input type="text" class="form-control" id="subject" name="form[subject]" placeholder="Enter subject" required value={{value($form['subject'])}}>
             </div>
           </div>
 
           <div class="form-row mt-2">
             <div class="col">
               <label for="message">Content</label>
-              <textarea class="form-control" id="message" name="message" placeholder="Enter message" rows="12"></textarea>
+              <textarea class="form-control" id="message" name="form[message]" placeholder="Enter message" rows="12">{{value($form['message'])}}</textarea>
             </div>
           </div>
           <div class="form-row mt-4 float-right">
