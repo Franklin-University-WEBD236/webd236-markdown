@@ -106,6 +106,9 @@
     </div>
   </div>
 </div>
+<script>
+  var simplemde = new SimpleMDE({ element: $("#message")[0] });
+</script>
 
     </div>
     <footer class="footer">
