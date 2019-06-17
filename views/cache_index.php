@@ -106,7 +106,10 @@
 </div>
 <script>
   var simplemde = new SimpleMDE({
-    element: $("#message")[0]
+    element: $("#message")[0],
+    renderingConfig: {
+  		codeSyntaxHighlighting: true
+	  }
   });
 </script>
 
