@@ -66,20 +66,32 @@
 <div class="row">
   <div class="col-lg-12">
     <h2>Formatted form data</h2>
-    <div class="row">
-      <div class="col">
-        Name
-      </div>
-      <div class="col">
-        <?php echo(htmlentities($form['name'])); ?>
-    </div>
-    <div class="row">
-      <div class="col">
-        email
-      </div>
-      <div class="col">
-        <?php echo(htmlentities($form['email'])); ?>
-    </div>
+    <table class="table table-striped" frame="box">
+      <thead class="thead-dark">
+        <tr>
+          <th>Input</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="align-middle">Name</td>
+          <td class="align-middle"><?php echo(htmlentities($form['name'])); ?></td>
+        </tr>
+        <tr>
+          <td class="align-middle">Email</td>
+          <td class="align-middle"><?php echo(htmlentities($form['email'])); ?></td>
+        </tr>
+        <tr>
+          <td class="align-middle">Subject</td>
+          <td class="align-middle"><?php echo(htmlentities($form['subject'])); ?></td>
+        </tr>
+        <tr>
+          <td class="align-middle">Message</td>
+          <td class="align-middle"><?php echo($parsedown->text($form['message'])); ?></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
     

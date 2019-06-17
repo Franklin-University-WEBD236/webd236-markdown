@@ -1,5 +1,6 @@
 <?php
 include_once "include/util.php";
+include_once "include/Parsedown.php";
 
 function dumpArray($elements) {
   $result = "<ol>\n";
@@ -17,11 +18,13 @@ function dumpArray($elements) {
 
 function post_view() {
   $form = safeParam($_POST, 'form');
+  $parsedown = new ParseDown();
   renderTemplate(
     "views/view_contact.php",
     array(
       'title' => 'PHP Rich Text Editing',
-      'form' => $form
+      'form' => $form,
+      'parsedown' => $parsedown
     )
   );
 }

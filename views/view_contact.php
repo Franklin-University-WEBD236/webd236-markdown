@@ -10,20 +10,32 @@
 <div class="row">
   <div class="col-lg-12">
     <h2>Formatted form data</h2>
-    <div class="row">
-      <div class="col">
-        Name
-      </div>
-      <div class="col">
-        {{$form['name']}}
-    </div>
-    <div class="row">
-      <div class="col">
-        email
-      </div>
-      <div class="col">
-        {{$form['email']}}
-    </div>
+    <table class="table table-striped" frame="box">
+      <thead class="thead-dark">
+        <tr>
+          <th>Input</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="align-top">Name</td>
+          <td class="align-top">{{$form['name']}}</td>
+        </tr>
+        <tr>
+          <td class="align-top">Email</td>
+          <td class="align-top">{{$form['email']}}</td>
+        </tr>
+        <tr>
+          <td class="align-top">Subject</td>
+          <td class="align-top">{{$form['subject']}}</td>
+        </tr>
+        <tr>
+          <td class="align-top">Message</td>
+          <td class="align-top">{{{$parsedown->text($form['message'])}}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
     
