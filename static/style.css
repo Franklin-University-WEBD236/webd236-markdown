@@ -14,3 +14,7 @@ footer {
   background-color: #f5f5f5;
   text-align: center;
 }
+.editor-preview pre,
+.editor-preview-side pre {
+  font-family: "Consolas", "Lucida Console", "Courier New", monospace;
+}
