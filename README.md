@@ -1,3 +1,3 @@
-# WEBD 236 forms example
+# WEBD 236 markdown example
 
-An example of forms processing for various kinds of data.
+An example of using markdown for rich text formatting without injection vulnerabilities.

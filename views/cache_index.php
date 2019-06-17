@@ -15,15 +15,11 @@
   <body>
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
       <a class="navbar-brand" href="/">
-        <img src="https://cdn.glitch.com/5b0f8a54-892a-4d86-9d84-94836d1a3a6c%2Fblog.svg?v=1560192184638" width="30" height="30" class="d-inline-block align-top" alt=""> PHP Forms Examples</a>
+        <img src="https://cdn.glitch.com/5b0f8a54-892a-4d86-9d84-94836d1a3a6c%2Fblog.svg?v=1560192184638" width="30" height="30" class="d-inline-block align-top" alt=""> Rich Text Examples</a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item active">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/sweet">My sweet form</a>
-        </li>
-
         <li class="nav-item">
           <a class="nav-link" href="/about">About</a>
         </li>
@@ -36,7 +32,7 @@
       <div class="row">
         <div class="col-lg-12">
           <h1 class="display-4"><?php echo(htmlentities($title)); ?></h1>
-          <p class="lead">PHP Forms Examples. This demonstrates basic and complex forms and their processing through a script.</p>
+          <p class="lead">PHP Rich Text Editing. This demonstrates rich text editing through Markdown and a couple of third party libraries. Markdown is a more reasonable format for web based text editing because it isn't injectable. Two libraries are used: <a href="https://simplemde.com/">SimpleMDE</a> and <a href="https://parsedown.org/">Parsedown</a>.</p>
           <p><em>Author: <a href="https://www.franklin.edu/about-us/faculty-staff/faculty-profiles/whittakt">Todd Whittaker</a></em></p>
           <hr>
         </div>
