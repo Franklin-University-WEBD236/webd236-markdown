@@ -75,20 +75,20 @@
       </thead>
       <tbody>
         <tr>
-          <td class="align-middle">Name</td>
-          <td class="align-middle"><?php echo(htmlentities($form['name'])); ?></td>
+          <td class="align-top">Name</td>
+          <td class="align-top"><?php echo(htmlentities($form['name'])); ?></td>
         </tr>
         <tr>
-          <td class="align-middle">Email</td>
-          <td class="align-middle"><?php echo(htmlentities($form['email'])); ?></td>
+          <td class="align-top">Email</td>
+          <td class="align-top"><?php echo(htmlentities($form['email'])); ?></td>
         </tr>
         <tr>
-          <td class="align-middle">Subject</td>
-          <td class="align-middle"><?php echo(htmlentities($form['subject'])); ?></td>
+          <td class="align-top">Subject</td>
+          <td class="align-top"><?php echo(htmlentities($form['subject'])); ?></td>
         </tr>
         <tr>
-          <td class="align-middle">Message</td>
-          <td class="align-middle"><?php echo($parsedown->text($form['message'])); ?></td>
+          <td class="align-top">Message</td>
+          <td class="align-top"><?php echo($parsedown->text($form['message'])); ?></td>
         </tr>
       </tbody>
     </table>
