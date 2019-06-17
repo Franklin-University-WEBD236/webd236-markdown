@@ -10,7 +10,7 @@
 <div class="row">
   <div class="col-lg-12">
     <h2>Formatted form data</h2>
-    <table class="table table-striped" frame="box">
+    <table class="table frame="box">
       <thead class="thead-dark">
         <tr>
           <th>Input</th>
