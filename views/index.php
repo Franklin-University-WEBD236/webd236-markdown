@@ -11,21 +11,21 @@
       </div>
 
       <div class="card-body">
-        <form action="@@process/contact@@" method="post">
+        <form action="@@contact/view@@" method="post">
           <div class="form-row">
             <div class="col">
               <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" name="form[name]" placeholder="Enter your name" required value={{value($form['name'])}}>
+              <input type="text" class="form-control" id="name" name="form[name]" placeholder="Enter your name" value={{value($form['name'])}}>
             </div>
             <div class="col">
-              <label for="email3">Email address</label>
-              <input type="email" class="form-control" id="email3" name="form[email]" placeholder="Enter email address" required value={{value($form['email'])}}>
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" name="form[email]" placeholder="Enter email address" value={{value($form['email'])}}>
             </div>
           </div>
           <div class="form-row mt-2">
             <div class="col">
               <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="subject" name="form[subject]" placeholder="Enter subject" required value={{value($form['subject'])}}>
+              <input type="text" class="form-control" id="subject" name="form[subject]" placeholder="Enter subject" value={{value($form['subject'])}}>
             </div>
           </div>
 
@@ -49,5 +49,18 @@
 <script>
   var simplemde = new SimpleMDE({ element: $("#message")[0] });
 </script>
+
+<script>
+$('form input').keydown(function (e) {
+  alert(e.keyCode);
+  if (e.keyCode == 13) {
+    var inputs = $(this).parents("form").eq(0).find(":input");
+    if (inputs[inputs.index(this) + 1] != null) {                    
+      inputs[inputs.index(this) + 1].focus();
+    }
+    e.preventDefault();
+    return false;
+  }
+});
 
 %% views/footer.html %% 
