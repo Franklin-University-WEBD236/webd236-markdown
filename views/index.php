@@ -19,7 +19,7 @@
             </div>
             <div class="col">
               <label for="email">Email address</label>
-              <input type="email" class="form-control" id="email" name="form[email]" placeholder="Enter email address" value={{value($form['email'])}}>
+              <input type="text" class="form-control" id="email" name="form[email]" placeholder="Enter email address" value={{value($form['email'])}}>
             </div>
           </div>
           <div class="form-row mt-2">
@@ -51,8 +51,9 @@
 </script>
 
 <script>
+// I got tired of the enter key submitting the form, so I used this:  
+// https://www.hashbangcode.com/article/prevent-enter-key-submitting-forms-jquery
 $('form input').keydown(function (e) {
-  alert(e.keyCode);
   if (e.keyCode == 13) {
     var inputs = $(this).parents("form").eq(0).find(":input");
     if (inputs[inputs.index(this) + 1] != null) {                    
@@ -62,5 +63,6 @@ $('form input').keydown(function (e) {
     return false;
   }
 });
+</script>
 
 %% views/footer.html %% 

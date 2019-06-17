@@ -2,10 +2,31 @@
 
 <div class="row">
   <div class="col-lg-12">
-    {{{dumpArray($variables)}}}
+    <h2>Raw Form Data</h2>
+    {{{dumpArray($form)}}}
   </div>
 </div>
 
+<div class="row">
+  <div class="col-lg-12">
+    <h2>Formatted form data</h2>
+    <div class="row">
+      <div class="col">
+        Name
+      </div>
+      <div class="col">
+        {{$form['name']}}
+    </div>
+    <div class="row">
+      <div class="col">
+        email
+      </div>
+      <div class="col">
+        {{$form['email']}}
+    </div>
+  </div>
+</div>
+    
 <div class="row mt-4">
   <div class="col-lg-12">
     <div class="form-group">

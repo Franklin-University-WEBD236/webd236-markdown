@@ -18,10 +18,10 @@ function dumpArray($elements) {
 function post_view() {
   $form = safeParam($_POST, 'form');
   renderTemplate(
-    "views/process.php",
+    "views/view_contact.php",
     array(
       'title' => 'PHP Rich Text Editing',
-      'variables' => $form
+      'form' => $form
     )
   );
 }
