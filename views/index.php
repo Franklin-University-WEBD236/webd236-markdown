@@ -47,7 +47,9 @@
   </div>
 </div>
 <script>
-  var simplemde = new SimpleMDE({ element: $("#message")[0] });
+  var simplemde = new SimpleMDE({
+    element: $("#message")[0]
+  });
 </script>
 
 <script>
