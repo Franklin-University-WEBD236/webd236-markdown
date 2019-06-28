@@ -47,6 +47,8 @@
   </div>
 </div>
 <script>
+  // turn the text area with ID "message" into a rich text
+  // editor using markdown.
   var simplemde = new SimpleMDE({
     element: $("#message")[0],
     renderingConfig: {
